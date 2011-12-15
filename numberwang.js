@@ -22,7 +22,7 @@ function scoffANumber()
 		nopewang = document.getElementById("nopewang");
 		noneofthose = document.getElementById("noneofthose");
 		
-		if(nonewang>=5)
+		if(nonewang>=4)
 		{
 			noneofthose.currentTime = 0;
 			noneofthose.play();
