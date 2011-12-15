@@ -12,9 +12,25 @@
 
 body
 {
-	color:#FFFFFF;
+	color:#E066FF;
 	background-image: url(imagewang/numberwang.jpg);
 	font-family:'Bauhaus93Regular', sans-serif;
-	font-size: 16pt;
+	font-size: 20pt;
+	letter-spacing: +0.6pt;
+}
+
+p
+{
+	color:#00FFFF;
+	font-family:'Bauhaus93Regular', sans-serif;
+	font-size: 48pt;
+	letter-spacing: +0.6pt;
+}
+
+div
+{
+	color:#FCD116;
+	font-family:'Bauhaus93Regular', sans-serif;
+	font-size: 20pt;
 	letter-spacing: +0.6pt;
 }

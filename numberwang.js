@@ -27,7 +27,7 @@ function colosson(guesswang)
 	
 	// console.log(wangdate, randomwang, guesswang, numberwang);
 	
-	if(numberwang < 42.865) // that's numberwang!
+	if(numberwang < 44.444) // that's numberwang!
 	{
 		return true;
 	}
