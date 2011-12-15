@@ -14,6 +14,8 @@ function scoffANumber()
 		nopewang = document.getElementById("nopewang");
 		nopewang.play();
 	}
+	
+	return false;
 }
 
 function colosson(guesswang)

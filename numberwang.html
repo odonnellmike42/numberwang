@@ -46,8 +46,9 @@
 		<br>
 		<div id="status"></div>
 		
-		Guess a number: <input type="text" id="isItNumberwang" />
-		<input type="submit" id="sendTheNumber" value="Is that numberwang?"
-			onClick="scoffANumber()"/>
+		<form onsubmit="return scoffANumber()" >
+			Guess a number: <input type="text" id="isItNumberwang" />
+			<input type="submit" id="sendTheNumber" value="Is that numberwang?" />
+		</form>
 	</body>
 </html>
