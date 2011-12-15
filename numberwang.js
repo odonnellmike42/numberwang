@@ -11,8 +11,8 @@ function scoffANumber()
 	else
 	{
 		statusDiv.innerHTML = "Nope.";
-		nowang = document.getElementById("nopewang");
-		nowang.play();
+		nopewang = document.getElementById("nopewang");
+		nopewang.play();
 	}
 }
 
