@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title> Numberwang! The Maths Quiz That's Simply Everyone! </title>
+		<script type="text/javascript" src="numberwang.js" ></script>
+	</head>
+	<body>
+		
+		<!--theme music-->
+		<audio autoplay loop>
+			<source src="numberwangfull.ogg" >
+			<source src="numberwangfull.mp3" >
+		</audio>
+		
+		<!--hello and welcome to numberwang!-->
+		<audio autoplay>
+			<source src="hellowelcome.mp3" >
+			<source src="hellowelcome.ogg" >
+		</audio>
+		
+		<!--that's numberwang!-->
+		<audio id="thatsnumberwang">
+			<source src="thatsnumberwang.mp3" >
+			<source src="thatsnumberwang.ogg" >
+		</audio>
+		
+		<!--nope.-->
+		<audio id="nopewang">
+			<source src="nope.mp3" >
+			<source src="nope.ogg" >
+		</audio>
+		
+		Hello and welcome to Numberwang! It's you to go first!
+		<br>
+		<br>
+		<div id="status"></div>
+		
+		Guess a number: <input type="text" id="isItNumberwang" />
+		<input type="submit" id="sendTheNumber" value="Is that numberwang?"
+			onClick="scoffANumber()"/>
+	</body>
+</html>
