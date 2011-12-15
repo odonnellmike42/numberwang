@@ -1,6 +1,9 @@
+var nonewang = 0;
+
 function scoffANumber()
 {
 	number = Number(document.getElementById("isItNumberwang").value);
+	formwang = document.getElementById("isItNumberwang");
 	statusDiv = document.getElementById("status");
 	
 	numberwang = colosson(number);
@@ -8,18 +11,36 @@ function scoffANumber()
 	{
 		statusDiv.innerHTML = "That's Numberwang!";
 		yeswang = document.getElementById("thatsnumberwang");
+		yeswang.currentTime = 0;
 		yeswang.play();
 		addToScoreWang(Math.floor(numberwang * 2));
+		nonewang = 0;
 	}
 	else
 	{
 		statusDiv.innerHTML = "Nope.";
 		nopewang = document.getElementById("nopewang");
-		nopewang.play();
+		noneofthose = document.getElementById("noneofthose");
+		
+		if(nonewang>=5)
+		{
+			noneofthose.currentTime = 0;
+			noneofthose.play();
+			nonewang = 0;
+		}
+		else
+		{
+			nopewang.currentTime = 0;
+			nopewang.play();
+			nonewang +=1;
+		}
+
 		addToScoreWang(Math.floor(numberwang / 3));
 	}
 	
+	
 	incrementGuessWang();
+	formwang.value = "";
 	return false;
 }
 
