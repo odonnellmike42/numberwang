@@ -1,8 +1,8 @@
 function scoffANumber()
 {
-	number = document.getElementById("isItNumberwang").value;
+	number = Number(document.getElementById("isItNumberwang").value);
 	statusDiv = document.getElementById("status");
-	if (isItNumberwang(number))
+	if (colosson(number))
 	{
 		statusDiv.innerHTML = "That's Numberwang!";
 		yeswang = document.getElementById("thatsnumberwang");
@@ -16,14 +16,25 @@ function scoffANumber()
 	}
 }
 
-function isItNumberwang(guesswang)
+function colosson(guesswang)
 {
-	if (guesswang % 2)
+	datewang = new Date();
+	wangdate = datewang.getTime() % 100;
+	
+	randomwang = Math.random()*100;
+	
+	numberwang = Math.abs(wangdate + randomwang + guesswang) % 100;
+	
+	// console.log(wangdate, randomwang, guesswang, numberwang);
+	
+	if(numberwang < 42.865) // that's numberwang!
 	{
 		return true;
 	}
-	
-	return false;
+	else
+	{
+		return false;
+	}
 }
 
 function onPageLoadWang()
