@@ -2,24 +2,39 @@ function scoffANumber()
 {
 	number = Number(document.getElementById("isItNumberwang").value);
 	statusDiv = document.getElementById("status");
-	if (colosson(number))
+	
+	numberwang = colosson(number);
+	if (numberwang >= 0)
 	{
 		statusDiv.innerHTML = "That's Numberwang!";
 		yeswang = document.getElementById("thatsnumberwang");
 		yeswang.play();
+		addToScoreWang(Math.floor(numberwang * 2));		
 	}
 	else
 	{
 		statusDiv.innerHTML = "Nope.";
 		nopewang = document.getElementById("nopewang");
 		nopewang.play();
+		addToScoreWang(Math.floor(numberwang / 3));
 	}
 	
 	return false;
 }
 
+function addToScoreWang(score)
+{
+	scorewang = document.getElementById("scorewang");
+	scorewang.innerHTML = Number(scorewang.innerHTML) + score;
+}
+
 function colosson(guesswang)
 {
+	if (isNaN(guesswang))
+	{
+		return -(Math.random()*55+45);
+	}
+	
 	datewang = new Date();
 	wangdate = datewang.getTime() % 100;
 	
@@ -31,11 +46,11 @@ function colosson(guesswang)
 	
 	if(numberwang < 44.444) // that's numberwang!
 	{
-		return true;
+		return numberwang;
 	}
 	else
 	{
-		return false;
+		return -numberwang;
 	}
 }
 
