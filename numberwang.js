@@ -9,7 +9,7 @@ function scoffANumber()
 		statusDiv.innerHTML = "That's Numberwang!";
 		yeswang = document.getElementById("thatsnumberwang");
 		yeswang.play();
-		addToScoreWang(Math.floor(numberwang * 2));		
+		addToScoreWang(Math.floor(numberwang * 2));
 	}
 	else
 	{
@@ -19,6 +19,7 @@ function scoffANumber()
 		addToScoreWang(Math.floor(numberwang / 3));
 	}
 	
+	incrementGuessWang();
 	return false;
 }
 
@@ -26,6 +27,13 @@ function addToScoreWang(score)
 {
 	scorewang = document.getElementById("scorewang");
 	scorewang.innerHTML = Number(scorewang.innerHTML) + score;
+}
+
+function incrementGuessWang()
+{
+
+	guesswang = document.getElementById("guesswang");
+	guesswang.innerHTML = Number(guesswang.innerHTML) + 1;
 }
 
 function colosson(guesswang)
