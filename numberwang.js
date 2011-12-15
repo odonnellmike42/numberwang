@@ -25,3 +25,13 @@ function isItNumberwang(guesswang)
 	
 	return false;
 }
+
+function onPageLoadWang()
+{
+	/* Determines whether or not we need to use event listeners for broken web browsers (cough firefox cough) */
+	loopwang = document.getElementById("thememusic");
+	if ((typeof loopwang.loop) != "boolean")
+	{
+		loopwang.addEventListener("ended", function () { loopwang.play(); }, false);
+	}
+}
